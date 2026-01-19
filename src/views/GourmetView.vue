@@ -224,44 +224,38 @@
                   </div>
                   <p class="text-gray-700 mb-4">{{ review.content }}</p>
 
-                  <!-- Review Images -->
+                  <!-- Review Images - 微博风格九宫格 -->
                   <div
                     v-if="review.images && review.images.length > 0"
                     class="mb-4"
                   >
                     <div
-                      :class="[
-                        'grid gap-2 rounded-lg overflow-hidden',
-                        review.images.length === 1
-                          ? 'grid-cols-1'
-                          : review.images.length === 2
-                            ? 'grid-cols-2'
-                            : review.images.length === 3
-                              ? 'grid-cols-2'
-                              : 'grid-cols-2 md:grid-cols-3',
-                      ]"
+                      class="grid grid-cols-3 gap-1 bg-gray-100 rounded-lg overflow-hidden"
                     >
-                      <div
-                        v-for="(image, index) in review.images"
+                      <template
+                        v-for="(image, index) in review.images.slice(0, 9)"
                         :key="index"
-                        class="relative group cursor-pointer"
-                        @click="openImageModal(review.images, index)"
                       >
-                        <img
-                          :src="image"
-                          :alt="`レビュー画像 ${index + 1}`"
-                          class="w-full h-32 object-cover rounded-lg group-hover:opacity-90 transition-opacity"
-                        />
-                        <!-- Image overlay for multiple images -->
                         <div
-                          v-if="index === 2 && review.images.length > 3"
-                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg"
+                          class="relative group cursor-pointer bg-gray-100 aspect-square"
+                          @click="openImageModal(review.images, index)"
                         >
-                          <span class="text-white font-semibold text-lg">
-                            +{{ review.images.length - 3 }}
-                          </span>
+                          <img
+                            :src="image"
+                            :alt="`レビュー画像 ${index + 1}`"
+                            class="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+                          />
+                          <!-- 第9张图片的覆盖层 -->
+                          <div
+                            v-if="index === 8 && review.images.length > 9"
+                            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center"
+                          >
+                            <span class="text-white font-bold text-xl">
+                              +{{ review.images.length - 9 }}
+                            </span>
+                          </div>
                         </div>
-                      </div>
+                      </template>
                     </div>
                   </div>
 
@@ -329,7 +323,7 @@
             :key="index"
             :src="image"
             :alt="`画像 ${index + 1}`"
-            class="max-w-full max-h-[80vh] object-contain rounded-lg"
+            class="max-w-full max-h-[80vh] object-contain bg-white rounded-lg"
           />
         </div>
       </div>
@@ -396,6 +390,13 @@ const customerReviews = reactive([
     images: [
       "/trailmate/images/gourmet/furusato-1.jpg",
       "/trailmate/images/gourmet/kurashiki-gourmet.avif",
+      "/trailmate/images/gourmet/obanyaki-1.png",
+      "/trailmate/images/gourmet/kurashiki-momoko-1.jpg",
+      "/trailmate/images/gourmet/furusato-1.jpg",
+      "/trailmate/images/gourmet/kurashiki-gourmet.avif",
+      "/trailmate/images/gourmet/obanyaki-1.png",
+      "/trailmate/images/gourmet/kurashiki-momoko-1.jpg",
+      "/trailmate/images/gourmet/furusato-1.jpg",
     ],
     likes: 6,
     liked: false,
