@@ -89,39 +89,61 @@
                 {{ card.content }}
               </p>
 
-              <!-- Card Images - 小红书风格 -->
+              <!-- Card Images - 智能布局 -->
               <div v-if="card.images && card.images.length > 0" class="mb-4">
-                <div
-                  :class="[
-                    'grid gap-1 rounded-lg overflow-hidden',
-                    card.images.length === 1
-                      ? 'grid-cols-1'
-                      : card.images.length === 2
-                        ? 'grid-cols-2'
-                        : 'grid-cols-2',
-                  ]"
-                >
-                  <div
-                    v-for="(image, index) in card.images.slice(0, 4)"
-                    :key="index"
-                    class="relative group cursor-pointer aspect-square"
-                    @click="openImageModal(card.images, index)"
+                <!-- 智能计算布局 -->
+                <div class="grid gap-1 rounded-lg overflow-hidden">
+                  <template
+                    v-for="(row, rowIndex) in getImageLayout(card.images)"
+                    :key="rowIndex"
                   >
-                    <img
-                      :src="image"
-                      :alt="`画像 ${index + 1}`"
-                      class="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
-                    />
-                    <!-- More images overlay -->
                     <div
-                      v-if="index === 3 && card.images.length > 4"
-                      class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                      :class="`grid gap-1`"
+                      :style="{
+                        gridTemplateColumns: `repeat(${row.length}, 1fr)`,
+                      }"
                     >
-                      <span class="text-white font-semibold text-lg">
-                        +{{ card.images.length - 4 }}
-                      </span>
+                      <div
+                        v-for="(image, imageIndex) in row"
+                        :key="imageIndex"
+                        class="relative group cursor-pointer aspect-square"
+                        @click="
+                          openImageModal(
+                            card.images,
+                            getFlattenedIndex(
+                              card.images,
+                              rowIndex,
+                              imageIndex,
+                            ),
+                          )
+                        "
+                      >
+                        <img
+                          :src="image"
+                          :alt="`画像 ${getFlattenedIndex(card.images, rowIndex, imageIndex) + 1}`"
+                          class="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+                        />
+                        <!-- More images overlay for last visible image -->
+                        <div
+                          v-if="
+                            rowIndex ===
+                              getImageLayout(card.images).length - 1 &&
+                            imageIndex === row.length - 1 &&
+                            card.images.length >
+                              getMaxDisplayImages(card.images)
+                          "
+                          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                        >
+                          <span class="text-white font-semibold text-lg">
+                            +{{
+                              card.images.length -
+                              getMaxDisplayImages(card.images)
+                            }}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </template>
                 </div>
               </div>
 
@@ -392,7 +414,7 @@ const experienceCards = reactive([
     id: 1,
     user: {
       name: "田中美香",
-      avatar: "/trailmate/images/avator/avatar-1.png",
+      avatar: "/trailmate/images/avatar/avatar-1.png",
     },
     rating: 5,
     time: "2時間前",
@@ -410,7 +432,7 @@ const experienceCards = reactive([
     id: 2,
     user: {
       name: "佐藤健太",
-      avatar: "/trailmate/images/avator/avatar-2.png",
+      avatar: "/trailmate/images/avatar/avatar-2.png",
     },
     rating: 4,
     time: "1日前",
@@ -429,7 +451,7 @@ const experienceCards = reactive([
     id: 3,
     user: {
       name: "山田花子",
-      avatar: "/trailmate/images/avator/avatar-3.png",
+      avatar: "/trailmate/images/avatar/avatar-3.png",
     },
     rating: 5,
     time: "3日前",
@@ -444,6 +466,72 @@ const experienceCards = reactive([
     likes: 42,
     comments: 15,
     liked: false,
+  },
+  {
+    id: 4,
+    user: {
+      name: "高橋大輔",
+      avatar: "/trailmate/images/avator/avatar-4.png",
+    },
+    rating: 4,
+    time: "4時間前",
+    content:
+      "倉敷の猫岛でtime was spent! 多くの猫とinteractiveして本当にfun experience。特にblack catのpersonalityが魅力的でした。おすすめスポットです！",
+    images: [
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1555685812-4b943f1cb29b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 35,
+    comments: 22,
+    liked: true,
+  },
+  {
+    id: 5,
+    user: {
+      name: "鈴木一郎",
+      avatar: "/trailmate/images/avatar/avatar-1.png",
+    },
+    rating: 5,
+    time: "5時間前",
+    content:
+      "倉敷の川遊船はreally relaxing experience！美しい景色とfreshな空氣で、日常のstressがすべて吹き飛びました。familyと行くに最適のスポットです。",
+    images: [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 28,
+    comments: 18,
+    liked: false,
+  },
+  {
+    id: 6,
+    user: {
+      name: "中村美咲",
+      avatar: "/trailmate/images/avatar/avatar-2.png",
+    },
+    rating: 5,
+    time: "6時間前",
+    content:
+      "倉敷の古老な茶屋で日本のtraditional tea ceremonyを体験しました！masterの説明が詳しくて、茶の味道もreally exquisite。また必ず行きたいplaceです。",
+    images: [
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 51,
+    comments: 33,
+    liked: true,
   },
 ]);
 
@@ -461,6 +549,90 @@ const newReview = reactive({
 
 // File input ref
 const fileInput = ref<HTMLInputElement>();
+
+// Image layout calculation functions
+const getImageLayout = (images: string[]) => {
+  const layout: string[][] = [];
+
+  if (images.length === 0) return layout;
+
+  // 根据图片数量计算最优布局
+  switch (images.length) {
+    case 1:
+      layout.push([images[0]]);
+      break;
+    case 2:
+      layout.push([images[0], images[1]]);
+      break;
+    case 3:
+      layout.push([images[0], images[1], images[2]]);
+      break;
+    case 4:
+      layout.push([images[0], images[1]]);
+      layout.push([images[2], images[3]]);
+      break;
+    case 5:
+      layout.push([images[0], images[1], images[2]]);
+      layout.push([images[3], images[4]]);
+      break;
+    case 6:
+      layout.push([images[0], images[1], images[2]]);
+      layout.push([images[3], images[4], images[5]]);
+      break;
+    case 7:
+      layout.push([images[0], images[1], images[2]]);
+      layout.push([images[3], images[4]]);
+      layout.push([images[5], images[6]]);
+      break;
+    case 8:
+      layout.push([images[0], images[1], images[2]]);
+      layout.push([images[3], images[4], images[5]]);
+      layout.push([images[6], images[7]]);
+      break;
+    case 9:
+      layout.push([images[0], images[1], images[2]]);
+      layout.push([images[3], images[4], images[5]]);
+      layout.push([images[6], images[7], images[8]]);
+      break;
+    default:
+      // 超过9张的情况
+      const maxImages = Math.min(images.length, 8);
+      if (maxImages <= 3) {
+        layout.push(images.slice(0, maxImages));
+      } else if (maxImages <= 6) {
+        layout.push(images.slice(0, 3));
+        layout.push(images.slice(3, maxImages));
+      } else {
+        layout.push(images.slice(0, 3));
+        layout.push(images.slice(3, 6));
+        layout.push(images.slice(6, maxImages));
+      }
+      break;
+  }
+
+  return layout;
+};
+
+const getFlattenedIndex = (
+  images: string[],
+  rowIndex: number,
+  imageIndex: number,
+) => {
+  let index = 0;
+  const layout = getImageLayout(images);
+
+  for (let i = 0; i < rowIndex; i++) {
+    index += layout[i].length;
+  }
+
+  return index + imageIndex;
+};
+
+const getMaxDisplayImages = (images: string[]) => {
+  if (images.length <= 3) return images.length;
+  if (images.length <= 6) return 6;
+  return 8;
+};
 
 // Functions
 const toggleLike = (cardId: number) => {
