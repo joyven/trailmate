@@ -57,7 +57,7 @@
             <div class="md:flex">
               <div class="md:w-1/2">
                 <img
-                  src="/images/home/kurashiki-4.jpeg"
+                  src="/images/home/kurashiki-center.png"
                   alt="倉敷川畔"
                   class="w-full h-96 md:h-full object-cover"
                 />
