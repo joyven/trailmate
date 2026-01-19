@@ -36,7 +36,7 @@
               <img
                 src="/images/gourmet/obanyaki-1.png"
                 alt="大判焼きのお店"
-                class="w-full h-48 object-cover"
+                class="w-full h-56 object-cover"
               />
               <div class="p-6">
                 <div class="flex items-center justify-between mb-2">
@@ -86,7 +86,7 @@
               <img
                 src="/images/gourmet/kurashiki-momoko-1.jpg"
                 alt="くらしき桃子"
-                class="w-full h-48 object-cover"
+                class="w-full h-56 object-cover"
               />
               <div class="p-6">
                 <div class="flex items-center justify-between mb-2">
@@ -134,7 +134,7 @@
               <img
                 src="/images/gourmet/furusato-1.jpg"
                 alt="ふる里"
-                class="w-full h-48 object-cover"
+                class="w-full h-56 object-cover"
               />
               <div class="p-6">
                 <div class="flex items-center justify-between mb-2">

@@ -40,12 +40,12 @@
               </div>
               <div class="md:w-1/2 relative">
                 <img
-                  src="/images/spots/kurashiki-map.png"
+                  src="/images/spots/kurashiki-map-2.png"
                   alt="倉敷エリアマップ"
                   class="w-full h-96 object-cover"
                 />
                 <!-- Map markers -->
-                <div
+                <!-- <div
                   class="absolute top-1/4 left-1/4 w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg"
                 ></div>
                 <div
@@ -56,7 +56,7 @@
                 ></div>
                 <div
                   class="absolute top-1/2 right-1/4 w-4 h-4 bg-yellow-500 rounded-full border-2 border-white shadow-lg"
-                ></div>
+                ></div> -->
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
             <div class="md:flex">
               <div class="md:w-1/2">
                 <img
-                  src="/images/spots/kurashiki-center.jpeg"
+                  src="/images/spots/kurashiki-center.png"
                   alt="倉敷川畔"
                   class="w-full h-96 md:h-full object-cover"
                 />

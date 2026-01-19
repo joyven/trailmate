@@ -23,54 +23,6 @@
     <!-- Main Content -->
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Featured Course -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">おすすめコース</h2>
-
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div class="md:flex">
-              <div class="md:w-1/2">
-                <img
-                  src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                  alt="倉敷コース"
-                  class="w-full h-96 md:h-full object-cover"
-                />
-              </div>
-              <div class="md:w-1/2 p-8">
-                <div class="flex items-center space-x-4 mb-6">
-                  <div
-                    class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-gray-600 font-semibold">ユーザー</span>
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold text-gray-900">
-                      おすすめコース
-                    </h3>
-                    <div class="flex items-center space-x-2">
-                      <div class="flex text-yellow-400">
-                        <svg
-                          v-for="i in 5"
-                          :key="i"
-                          class="w-5 h-5 fill-current"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                          />
-                        </svg>
-                      </div>
-                      <span class="text-gray-600"
-                        >(256件のコメントがありました)</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Course Options -->
         <div class="mb-16">
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -79,7 +31,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
                 alt="コース1"
                 class="w-full h-64 object-cover"
               />
@@ -214,7 +166,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
                 alt="コース2"
                 class="w-full h-64 object-cover"
               />
@@ -328,7 +280,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
                 alt="コース3"
                 class="w-full h-64 object-cover"
               />
