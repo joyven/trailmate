@@ -148,7 +148,7 @@
             <div class="md:flex md:flex-row-reverse">
               <div class="md:w-1/2">
                 <img
-                  src="/images/spots/ivy-square.jpg"
+                  src="/images/spots/ivy-square-1.jpg"
                   alt="アイビースクエア"
                   class="w-full h-96 md:h-full object-cover"
                 />
