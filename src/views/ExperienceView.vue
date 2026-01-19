@@ -13,297 +13,579 @@
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
       <div class="relative z-10 text-center text-white px-4">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4">
-          地元の声·体験レポート
-        </h1>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">体験打卡</h1>
         <p class="text-xl md:text-2xl">
           倉敷を体験した方の生の声とレポートをお届けします。
         </p>
       </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Experience Cards - 小红书风格流式布局 -->
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Detailed Reviews -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">
-            お客様の詳細な体験レポート
-          </h2>
-
-          <div class="space-y-6">
-            <!-- Review 1 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center"
-                >
-                  <span class="text-gray-600 font-semibold">ユーザー</span>
-                </div>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2">
-                      <span class="font-semibold text-gray-900"
-                        >ユーザーです</span
-                      >
-                      <div class="flex text-yellow-400">
-                        <svg
-                          v-for="i in 5"
-                          :key="i"
-                          class="w-4 h-4 fill-current"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <span class="text-sm text-gray-500">1時間ほど前です</span>
-                  </div>
-
-                  <div class="space-y-4 text-gray-700">
-                    <p>
-                      1.今まで、私は4回行きましたが、毎回とてもいい気分になりました。路地をゆっくり歩いていると、周りがとても静かに感じられます。川に座ってぼーっとしているのも観光地の中の店を楽しむ特色があります。
-                    </p>
-                    <p>
-                      専売招き猫はガラスで作られた様々な小物を売っています。また、売りもあります
-                      地元のカウボーイ生地はとても有名です！観光地に美術館があるので、興味のある友達は行ってみてください！
-                    </p>
-                    <p>
-                      2.ほとんどすべての観光地のように、写真を撮るのに適しています。通りが長くいろいろな店舗で記念品や地元の特産品などを販売しています。美術館、お寺、ジーンズ街などもあります。
-                    </p>
-                    <p>
-                      3.フィールドはとても美しい！週末の観光散歩は旅行の気持ちを作り出す！遊覧船と車夫サービスがあります！岡山地区に行ったらぜひ歩きに来てください！私は前夜夜景を撮り、翌日の昼にもう一度訪れました！京都や高山の人より人を押しつぶすことはなく、素晴らしい！
-                    </p>
-                    <p>
-                      4.環境は写真のように美しく、典雅な建物と西洋式が揃っており、河川と柳の並木が備えられており、雨に覆われていても、新しい風貌が作られています。星4つしかあげられていませんが、私自身の気持ちです。自然が少しも意図しない風貌が好きですが、ここはやはり訪れやすくて美しいところです
-                    </p>
-                  </div>
-
-                  <div class="flex space-x-4 text-sm text-gray-500 mt-4">
-                    <button
-                      class="flex items-center space-x-1 hover:text-red-500"
-                    >
-                      <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                        ></path>
-                      </svg>
-                      <span>好きです</span>
-                    </button>
-                    <button class="hover:text-blue-500">お返事します</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Categories -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">体験カテゴリ</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">写真撮影</h3>
-              <p class="text-gray-600 mb-4">
-                倉敷の美しい風景と建物を記念に撮影する体験
-              </p>
-              <div class="text-sm text-gray-500">256件のレビュー</div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                культурные活動
-              </h3>
-              <p class="text-gray-600 mb-4">美術館や民芸品を見る文化的な体験</p>
-              <div class="text-sm text-gray-500">128件のレビュー</div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-yellow-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">のんびり散步</h3>
-              <p class="text-gray-600 mb-4">川沿いをゆっくりと歩く静かな時間</p>
-              <div class="text-sm text-gray-500">89件のレビュー</div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-red-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4l-2 16h14l-2-16M11 9v8m4-8v8"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">食べ物体験</h3>
-              <p class="text-gray-600 mb-4">
-                倉敷の美味しい食べ物と特産品を试す
-              </p>
-              <div class="text-sm text-gray-500">167件のレビュー</div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-purple-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">スポット巡礼</h3>
-              <p class="text-gray-600 mb-4">倉敷の主要な観光地を巡る体験</p>
-              <div class="text-sm text-gray-500">203件のレビュー</div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-            >
-              <div
-                class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-indigo-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">宿泊体験</h3>
-              <p class="text-gray-600 mb-4">倉敷での宿泊体験とサービス</p>
-              <div class="text-sm text-gray-500">45件のレビュー</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add Your Review -->
-        <div class="bg-kurarishu-blue-50 rounded-2xl p-8 text-center">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            あなたの体験を分享してください
-          </h3>
-          <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
-            倉敷での体験を皆 вместе分享し、他の 여행者たちの参考にしましょう。
-          </p>
+        <!-- Write Review Button -->
+        <div class="flex justify-center mb-12">
           <button
-            class="bg-kurarishu-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-kurarishu-blue-700 transition-colors"
+            @click="showWriteModal = true"
+            class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
           >
+            <svg
+              class="w-6 h-6 inline-block mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"
+              ></path>
+            </svg>
             レビューを書く
           </button>
         </div>
+
+        <!-- Experience Cards Grid - 瀑布流布局 -->
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6">
+          <div
+            v-for="card in experienceCards"
+            :key="card.id"
+            class="break-inside-avoid mb-6 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          >
+            <!-- Card Header -->
+            <div class="p-4">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-10 h-10 rounded-full overflow-hidden">
+                  <img
+                    :src="card.user.avatar"
+                    :alt="card.user.name"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-900">
+                    {{ card.user.name }}
+                  </h3>
+                  <p class="text-sm text-gray-500">{{ card.time }}</p>
+                </div>
+                <div class="flex text-yellow-400">
+                  <svg
+                    v-for="i in 5"
+                    :key="i"
+                    class="w-4 h-4 fill-current"
+                    :class="{ 'opacity-30': i > card.rating }"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                {{ card.content }}
+              </p>
+
+              <!-- Card Images - 小红书风格 -->
+              <div v-if="card.images && card.images.length > 0" class="mb-4">
+                <div
+                  :class="[
+                    'grid gap-1 rounded-lg overflow-hidden',
+                    card.images.length === 1
+                      ? 'grid-cols-1'
+                      : card.images.length === 2
+                        ? 'grid-cols-2'
+                        : 'grid-cols-2',
+                  ]"
+                >
+                  <div
+                    v-for="(image, index) in card.images.slice(0, 4)"
+                    :key="index"
+                    class="relative group cursor-pointer aspect-square"
+                    @click="openImageModal(card.images, index)"
+                  >
+                    <img
+                      :src="image"
+                      :alt="`画像 ${index + 1}`"
+                      class="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+                    />
+                    <!-- More images overlay -->
+                    <div
+                      v-if="index === 3 && card.images.length > 4"
+                      class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                    >
+                      <span class="text-white font-semibold text-lg">
+                        +{{ card.images.length - 4 }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Actions -->
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100"
+              >
+                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                  <button
+                    @click="toggleLike(card.id)"
+                    class="flex items-center space-x-1 hover:text-red-500 transition-colors"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      :class="{ 'fill-current text-red-500': card.liked }"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      ></path>
+                    </svg>
+                    <span>{{ card.likes }}</span>
+                  </button>
+                  <button
+                    class="flex items-center space-x-1 hover:text-blue-500 transition-colors"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      ></path>
+                    </svg>
+                    <span>{{ card.comments }}</span>
+                  </button>
+                </div>
+                <button class="text-sm text-gray-400 hover:text-gray-600">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Write Review Modal -->
+    <div
+      v-if="showWriteModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+      @click="closeModal"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+        @click.stop
+      >
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-6 border-b">
+          <h2 class="text-xl font-bold text-gray-900">レビューを書く</h2>
+          <button @click="closeModal" class="text-gray-400 hover:text-gray-600">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+          <!-- Rating -->
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >評価</label
+            >
+            <div class="flex items-center space-x-1">
+              <button
+                v-for="i in 5"
+                :key="i"
+                @click="newReview.rating = i"
+                class="p-1"
+              >
+                <svg
+                  class="w-8 h-8 transition-colors"
+                  :class="
+                    i <= newReview.rating ? 'text-yellow-400' : 'text-gray-300'
+                  "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >体験分享</label
+            >
+            <textarea
+              v-model="newReview.content"
+              rows="6"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-pink-500 focus:border-transparent resize-none"
+              placeholder="あなたの体験を詳しく分享してください..."
+            ></textarea>
+          </div>
+
+          <!-- Image Upload -->
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >写真追加</label
+            >
+            <div class="grid grid-cols-4 gap-3">
+              <!-- Upload Button -->
+              <div
+                @click="triggerFileInput"
+                class="aspect-square border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:border-pink-400 transition-colors"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-8 h-8 text-gray-400 mx-auto mb-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    ></path>
+                  </svg>
+                  <p class="text-xs text-gray-500">追加</p>
+                </div>
+              </div>
+
+              <!-- Preview Images -->
+              <div
+                v-for="(image, index) in newReview.images"
+                :key="index"
+                class="relative aspect-square rounded-lg overflow-hidden"
+              >
+                <img
+                  :src="image"
+                  alt="プレビュー"
+                  class="w-full h-full object-cover"
+                />
+                <button
+                  @click="removeImage(index)"
+                  class="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <input
+              ref="fileInput"
+              type="file"
+              multiple
+              accept="image/*"
+              @change="handleFileUpload"
+              class="hidden"
+            />
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="flex items-center justify-end space-x-3 p-6 border-t bg-gray-50"
+        >
+          <button
+            @click="closeModal"
+            class="px-6 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            キャンセル
+          </button>
+          <button
+            @click="submitReview"
+            :disabled="!newReview.content.trim() || newReview.rating === 0"
+            class="px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          >
+            投稿する
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div
+      v-if="showImageModal"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+      @click="closeImageModal"
+    >
+      <div class="relative max-w-4xl max-h-full">
+        <button
+          @click="closeImageModal"
+          class="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <div class="flex space-x-2 overflow-x-auto">
+          <img
+            v-for="(image, index) in currentImages"
+            :key="index"
+            :src="image"
+            :alt="`画像 ${index + 1}`"
+            class="max-w-full max-h-[80vh] object-contain rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, reactive, onMounted } from "vue";
 
-const userRating = ref(0);
+// Mock data for experience cards
+const experienceCards = reactive([
+  {
+    id: 1,
+    user: {
+      name: "田中美香",
+      avatar: "/trailmate/images/avator/avatar-1.png",
+    },
+    rating: 5,
+    time: "2時間前",
+    content:
+      "倉敷美観地区を歩いて真的很有feel！古民家と川沿いの风景 составляют картину, как из фильма。 Particularly love the ivy-covered walls and traditional architecture. 推薦大家來這裡慢慢散步，感受歷史的氛圍。",
+    images: [
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 24,
+    comments: 8,
+    liked: false,
+  },
+  {
+    id: 2,
+    user: {
+      name: "佐藤健太",
+      avatar: "/trailmate/images/avator/avatar-2.png",
+    },
+    rating: 4,
+    time: "1日前",
+    content:
+      "倉敷の jean street でshoppingしました！オリジナル-jeans が本当にqualityが高いです。店員のserviceも良くて、many options がありました。價格もreasonableで、worth visiting!",
+    images: [
+      "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1566479179817-c4ad3e6a8b94?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 18,
+    comments: 12,
+    liked: true,
+  },
+  {
+    id: 3,
+    user: {
+      name: "山田花子",
+      avatar: "/trailmate/images/avator/avatar-3.png",
+    },
+    rating: 5,
+    time: "3日前",
+    content:
+      "大原美術館はreally impressive！、特にモネの睡蓮は震撼的で、many art lovers の楽しめるplaceです。館内のデザインもelegantで、coffee shop のviewも素晴らしい。Highly recommended!",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1580136579312-94651dfd596d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1544961436-1a8d8bb8c2d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    ],
+    likes: 42,
+    comments: 15,
+    liked: false,
+  },
+]);
+
+// Modal state
+const showWriteModal = ref(false);
+const showImageModal = ref(false);
+const currentImages = ref<string[]>([]);
+
+// New review form
+const newReview = reactive({
+  rating: 0,
+  content: "",
+  images: [] as string[],
+});
+
+// File input ref
+const fileInput = ref<HTMLInputElement>();
+
+// Functions
+const toggleLike = (cardId: number) => {
+  const card = experienceCards.find((c) => c.id === cardId);
+  if (card) {
+    card.liked = !card.liked;
+    card.likes += card.liked ? 1 : -1;
+  }
+};
+
+const triggerFileInput = () => {
+  fileInput.value?.click();
+};
+
+const handleFileUpload = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  const files = target.files;
+  if (files) {
+    Array.from(files).forEach((file) => {
+      if (file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          if (e.target?.result) {
+            newReview.images.push(e.target.result as string);
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+};
+
+const removeImage = (index: number) => {
+  newReview.images.splice(index, 1);
+};
+
+const closeModal = () => {
+  showWriteModal.value = false;
+  // Reset form
+  newReview.rating = 0;
+  newReview.content = "";
+  newReview.images = [];
+};
+
+const submitReview = () => {
+  if (!newReview.content.trim() || newReview.rating === 0) return;
+
+  // Add new review to the top of the list
+  experienceCards.unshift({
+    id: Date.now(),
+    user: {
+      name: "Anonymous",
+      avatar: "/images/avator/default-avatar.png",
+    },
+    rating: newReview.rating,
+    time: "たった今",
+    content: newReview.content,
+    images: [...newReview.images],
+    likes: 0,
+    comments: 0,
+    liked: false,
+  });
+
+  closeModal();
+};
+
+const openImageModal = (images: string[], startIndex: number) => {
+  currentImages.value = images;
+  showImageModal.value = true;
+};
+
+const closeImageModal = () => {
+  showImageModal.value = false;
+  currentImages.value = [];
+};
 </script>
+
+<style scoped>
+/* 瀑布流布局的CSS优化 */
+.columns-1 {
+  column-count: 1;
+}
+.columns-2 {
+  column-count: 2;
+}
+.columns-3 {
+  column-count: 3;
+}
+.columns-4 {
+  column-count: 4;
+}
+
+@media (max-width: 640px) {
+  .columns-2 {
+    column-count: 1;
+  }
+  .columns-3 {
+    column-count: 1;
+  }
+  .columns-4 {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .columns-3 {
+    column-count: 2;
+  }
+  .columns-4 {
+    column-count: 3;
+  }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+}
+
+/* 模态框动画 */
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+</style>
