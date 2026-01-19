@@ -31,7 +31,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
+                src="/images/courses/1.png"
                 alt="コース1"
                 class="w-full h-64 object-cover"
               />
@@ -152,11 +152,6 @@
 
                 <div class="flex items-center justify-between">
                   <span class="text-gray-600 text-sm">半日コース</span>
-                  <button
-                    class="bg-kurarishu-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-kurarishu-blue-700 transition-colors"
-                  >
-                    詳細を見る
-                  </button>
                 </div>
               </div>
             </div>
@@ -166,7 +161,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
+                src="/images/courses/2.png"
                 alt="コース2"
                 class="w-full h-64 object-cover"
               />
@@ -266,11 +261,6 @@
 
                 <div class="flex items-center justify-between">
                   <span class="text-gray-600 text-sm">1日コース</span>
-                  <button
-                    class="bg-kurarishu-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-kurarishu-blue-700 transition-colors"
-                  >
-                    詳細を見る
-                  </button>
                 </div>
               </div>
             </div>
@@ -280,7 +270,7 @@
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src="/images/courses/2d4a0f6717f5f1cb5573774536f55475c8db553f.png"
+                src="/images/courses/3.png"
                 alt="コース3"
                 class="w-full h-64 object-cover"
               />
@@ -382,11 +372,6 @@
 
                 <div class="flex items-center justify-between">
                   <span class="text-gray-600 text-sm">半日コース</span>
-                  <button
-                    class="bg-kurarishu-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-kurarishu-blue-700 transition-colors"
-                  >
-                    詳細を見る
-                  </button>
                 </div>
               </div>
             </div>
