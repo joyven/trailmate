@@ -214,26 +214,12 @@
                 </p>
               </div>
               <div class="lg:col-span-1">
-                <div class="grid grid-cols-4 gap-4">
-                  <!-- 左侧大图片 -->
+                <div class="w-full">
                   <img
-                    src="/images/special/house-1.jpg"
-                    alt="倉敷の工芸品 - 春"
-                    class="col-span-2 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
+                    src="/images/special/kurashiki-crafts.png"
+                    alt="倉敷の工芸品"
+                    class="w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
                   />
-                  <!-- 右侧上下两张小图片 -->
-                  <div class="col-span-2 grid grid-rows-2 gap-4">
-                    <img
-                      src="/images/special/house-2.jpg"
-                      alt="倉敷の工芸品 - 夏"
-                      class="w-full h-32 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
-                    />
-                    <img
-                      src="/images/special/house-3.jpg"
-                      alt="倉敷の工芸品 - 秋"
-                      class="w-full h-32 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -260,26 +246,19 @@
                 </p>
               </div>
               <div class="lg:col-span-1 order-1 lg:order-2">
-                <div class="grid grid-cols-4 gap-4">
-                  <!-- 左侧大图片 -->
+                <div class="grid grid-cols-2 gap-4">
+                  <!-- 第一张图片 -->
                   <img
-                    src="/images/special/art-1.jpg"
-                    alt="くらしきローカルマルシェ - 夏"
-                    class="col-span-2 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
+                    src="/images/special/art-4.png"
+                    alt="くらしきローカルマルシェ - 展示1"
+                    class="w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
                   />
-                  <!-- 右侧上下两张小图片 -->
-                  <div class="col-span-2 grid grid-rows-2 gap-4">
-                    <img
-                      src="/images/special/art-2.jpg"
-                      alt="くらしきローカルマルシェ - 秋"
-                      class="w-full h-32 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
-                    />
-                    <img
-                      src="/images/special/art-3.jpg"
-                      alt="くらしきローカルマルシェ - 冬"
-                      class="w-full h-32 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
-                    />
-                  </div>
+                  <!-- 第二张图片 -->
+                  <img
+                    src="/images/special/art-5.png"
+                    alt="くらしきローカルマルシェ - 展示2"
+                    class="w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105"
+                  />
                 </div>
               </div>
             </div>
