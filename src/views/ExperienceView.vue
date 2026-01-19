@@ -467,27 +467,27 @@ const experienceCards = reactive([
     comments: 15,
     liked: false,
   },
-  {
-    id: 4,
-    user: {
-      name: "高橋大輔",
-      avatar: "/trailmate/images/avator/avatar-4.png",
-    },
-    rating: 4,
-    time: "4時間前",
-    content:
-      "倉敷の猫岛でtime was spent! 多くの猫とinteractiveして本当にfun experience。特にblack catのpersonalityが魅力的でした。おすすめスポットです！",
-    images: [
-      "/trailmate/images/experience/4-1.jpg",
-      "/trailmate/images/experience/4-2.jpg",
-      "/trailmate/images/experience/4-3.jpg",
-      "/trailmate/images/experience/4-4.jpg",
-      "/trailmate/images/experience/4-5.jpg",
-    ],
-    likes: 35,
-    comments: 22,
-    liked: true,
-  },
+  // {
+  //   id: 4,
+  //   user: {
+  //     name: "高橋大輔",
+  //     avatar: "/trailmate/images/avator/avatar-4.png",
+  //   },
+  //   rating: 4,
+  //   time: "4時間前",
+  //   content:
+  //     "倉敷の猫岛でtime was spent! 多くの猫とinteractiveして本当にfun experience。特にblack catのpersonalityが魅力的でした。おすすめスポットです！",
+  //   images: [
+  //     "/trailmate/images/experience/4-1.jpg",
+  //     "/trailmate/images/experience/4-2.jpg",
+  //     "/trailmate/images/experience/4-3.jpg",
+  //     "/trailmate/images/experience/4-4.jpg",
+  //     "/trailmate/images/experience/4-5.jpg",
+  //   ],
+  //   likes: 35,
+  //   comments: 22,
+  //   liked: true,
+  // },
   {
     id: 5,
     user: {

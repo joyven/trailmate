@@ -113,7 +113,7 @@
           </div>
 
           <!-- Autumn Article -->
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+          <!-- <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
             <div class="md:flex">
               <div class="md:w-1/2">
                 <div class="relative">
@@ -122,7 +122,6 @@
                     alt="秋の倉敷"
                     class="w-full h-80 object-cover transition-all duration-500 ease-in-out hover:scale-105"
                   />
-                  <!-- Autumn Image Indicators -->
                   <div
                     class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
                   >
@@ -153,10 +152,10 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Winter Article -->
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+          <!-- <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
             <div class="md:flex md:flex-row-reverse">
               <div class="md:w-1/2">
                 <div class="relative">
@@ -165,7 +164,6 @@
                     alt="冬の倉敷"
                     class="w-full h-80 object-cover transition-all duration-500 ease-in-out hover:scale-105"
                   />
-                  <!-- Winter Image Indicators -->
                   <div
                     class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
                   >
@@ -194,7 +192,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Cultural Heritage -->
@@ -320,15 +318,12 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 // Image carousel data
-const springImages = [
-  "/trailmate/images/special/kurashiki-spring-1.png",
-  "/trailmate/images/special/kurashiki-spring-2.png",
-];
+const springImages = ["/trailmate/images/special/kurashiki-spring-2.png"];
 
 const summerImages = [
-  "/trailmate/images/special/kurashiki-summer-1.png",
-  "/trailmate/images/special/kurashiki-summer-2.png",
-  "/trailmate/images/special/kurashiki-summer-3.png",
+  // "/trailmate/images/special/kurashiki-summer-1.png",
+  // "/trailmate/images/special/kurashiki-summer-2.png",
+  // "/trailmate/images/special/kurashiki-summer-3.png",
   "/trailmate/images/special/kurashiki-summer.png",
 ];
 

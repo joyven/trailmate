@@ -345,8 +345,8 @@ const customerReviews = reactive([
     content:
       "甘さ控えめで幾つでも食べるれる饅頭とは違います！存在感vidersの１個食べたら大満足！2個食べれる人は相当の甘い物好き？っていうくらい、ガツンときます。クセになる美味しさです。絶対また食べたくなります",
     images: [
-      "/trailmate/images/gourmet/obanyaki-1.png",
-      "/trailmate/images/gourmet/obanyaki-2.png",
+      // "/trailmate/images/gourmet/obanyaki-1.png",
+      // "/trailmate/images/gourmet/obanyaki-2.png",
       "/trailmate/images/gourmet/obanyaki-3.png",
     ],
     likes: 12,
@@ -373,8 +373,8 @@ const customerReviews = reactive([
     content:
       "桃パフェが食べたくて伺いました。行った時は白麗という種類で、甘さも柔らかさも期待を飛び越えていく美味しさ！古民家を利用したカフェで、雰囲気もいいし店員さんの説明も分かりやすく、桃パフェを満喫できました。桃以外にも美味しそうなフルーツのパフェやケーキもあって、どれも美味しそう！また食べにいきたい～",
     images: [
-      "/trailmate/images/gourmet/kurashiki-momoko-1.jpg",
-      "/trailmate/images/gourmet/furusato-1.jpg",
+      // "/trailmate/images/gourmet/kurashiki-momoko-1.jpg",
+      // "/trailmate/images/gourmet/furusato-1.jpg",
       "/trailmate/images/gourmet/obanyaki-1.png",
     ],
     likes: 15,
@@ -388,11 +388,7 @@ const customerReviews = reactive([
     time: "1日前です",
     content:
       "ふる里でのランチしました。古民家の雰囲気を楽しみながら、手作り料理をいただけて本当に満足でした。スタッフの方や料理長の優しいお人柄も素晴らしい店でまた行きたいです！",
-    images: [
-      "/trailmate/images/gourmet/furusato-1.jpg",
-      "/trailmate/images/gourmet/kurashiki-gourmet.avif",
-      "/trailmate/images/gourmet/obanyaki-1.png",
-    ],
+    images: ["/trailmate/images/gourmet/furusato-2.jpg"],
     likes: 6,
     liked: false,
   },
